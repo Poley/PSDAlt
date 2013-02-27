@@ -6,10 +6,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import uk.ac.glasgow.internman.Role;
 import uk.ac.glasgow.internman.Advertisement;
 import uk.ac.glasgow.internman.Employer;
 import uk.ac.glasgow.internman.InternMan;
 import uk.ac.glasgow.internman.Student;
+import uk.ac.glasgow.internman.UoGGrade;
 import uk.ac.glasgow.internman.usermanagement.*;
 import uk.ac.glasgow.internman.userstore.*;
 import uk.ac.glasgow.internman.advertmanagement.*;
@@ -61,17 +63,17 @@ public class InternManImpl implements InternMan {
 	}
 
 	@Override
-	public AdvertisementImpl createNewAdvertisement(String applicationDetails) {
+	public Advertisement createNewAdvertisement(String applicationDetails) {
 		return adverts.createAdv(applicationDetails);
 	}
 
 	@Override
-	public AdvertisementImpl selectAdvertisement(Integer index) {
+	public Advertisement selectAdvertisement(Integer index) {
 		return adverts.selectAdvertisement(index);
 	}
 
 	@Override
-	public RoleImpl selectRole(Integer advertisementIndex, Integer roleIndex) {		
+	public Role selectRole(Integer advertisementIndex, Integer roleIndex) {		
 		return adverts.selectRole(advertisementIndex, roleIndex);
 	}
 
@@ -89,7 +91,7 @@ public class InternManImpl implements InternMan {
 	}
 
 	@Override
-	public void notifyAcceptedOffer(RoleImpl role, String managerName,
+	public void notifyAcceptedOffer(Role role, String managerName,
 			String managerEmail) {
 		System.out.println("Notified");
 		
@@ -122,7 +124,7 @@ public class InternManImpl implements InternMan {
 	}
 
 	@Override
-	public RoleImpl createNewSelfSourcedRole(String title, String location,
+	public Role createNewSelfSourcedRole(String title, String location,
 			Date start, Date end, String description, Double salary) {
 		return adverts.createRole(title, location, start, end, description, salary);
 	}
