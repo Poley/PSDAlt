@@ -1,0 +1,7 @@
+[Bb]in/
+*.swp
+*.bak
+.classpath
+.project
+.metadata
+.settings
