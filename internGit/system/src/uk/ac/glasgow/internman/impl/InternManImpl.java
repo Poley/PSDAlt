@@ -30,7 +30,7 @@ public class InternManImpl implements InternMan {
 	private UserManagementImpl users;
 	private AdvertManagementImpl adverts;
 	
-	public InternManImpl(){
+	public InternManImpl(UserStore userStore){
 		this.users = new UserManagementImpl();
 		this.adverts = new AdvertManagementImpl();
 	}

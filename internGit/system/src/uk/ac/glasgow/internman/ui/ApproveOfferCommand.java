@@ -9,7 +9,7 @@ import uk.ac.glasgow.clui.SystemDialogue;
 import uk.ac.glasgow.internman.InternMan;
 import uk.ac.glasgow.internman.Internship;
 import uk.ac.glasgow.internman.Internship.InternshipStatus;
-import uk.ac.glasgow.internman.userstore.Student;
+import uk.ac.glasgow.internman.Student;
 
 @MinimumArguments(1)
 @CommandDescription("")

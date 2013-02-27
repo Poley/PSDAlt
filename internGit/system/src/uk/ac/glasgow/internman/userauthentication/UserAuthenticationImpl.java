@@ -14,7 +14,7 @@ public class UserAuthenticationImpl implements UserAuthentication{
 	File storeFile;
 
 	public UserAuthenticationImpl(){
-		this.users = new UserStoreImpl();
+		this.users = new UserStoreImpl(null);
 		
 	}
 	

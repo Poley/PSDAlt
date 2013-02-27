@@ -6,7 +6,7 @@ import java.util.Map;
 import uk.ac.glasgow.internman.Advertisement;
 import uk.ac.glasgow.internman.userstore.User;
 
-public class AdvertStoreImpl {
+public class AdvertStoreImpl implements AdvertStore{
 	
 	public Map<Integer, Advertisement> adverts;
 	private static Integer advertNo = 0;

@@ -9,6 +9,8 @@ import uk.ac.glasgow.clui.SystemCommand;
 import uk.ac.glasgow.clui.SystemCommandException;
 import uk.ac.glasgow.clui.SystemDialogue;
 import uk.ac.glasgow.internman.advertstore.AdvertisementImpl;
+import uk.ac.glasgow.internman.Advertisement;
+import uk.ac.glasgow.internman.Advertisement.AdvertisementStatus;
 import uk.ac.glasgow.internman.InternMan;
 @MinimumArguments(1)
 @CommandDescription("Allows a course coordinator to release an internship advertisement to students.")
@@ -34,7 +36,7 @@ public class PublishAdvertisementCommand extends SystemCommand<InternMan>{
 						
 			facade.publishAdvertisement(advertisementIndex,comment);
 			
-			AdvertisementImpl advertisement = facade.getAdvertisements().get(advertisementIndex);
+			Advertisement advertisement = facade.getAdvertisements().get(advertisementIndex);
 
 			if (advertisement != null &&
 					advertisement.getStatus() == AdvertisementStatus.PUBLISHED)

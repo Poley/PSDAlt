@@ -2,8 +2,10 @@ package uk.ac.glasgow.internman.advertstore;
 
 import java.util.Date;
 
+import uk.ac.glasgow.internman.Role;
 
-public class RoleImpl {
+
+public class RoleImpl implements Role{
 String title;
 String location;
 Date start;
@@ -47,5 +49,15 @@ public String getDescription() {
 }
 public void setDescription(String description) {
 	this.description = description;
+}
+@Override
+public Double getSalary() {
+	// TODO Auto-generated method stub
+	return null;
+}
+@Override
+public boolean isApproved() {
+	// TODO Auto-generated method stub
+	return false;
 }
 }

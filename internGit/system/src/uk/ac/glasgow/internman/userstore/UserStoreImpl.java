@@ -12,7 +12,7 @@ public class UserStoreImpl implements UserStore{
 	
 	Map<String,User> users = new HashMap<String,User>();
 
-	public UserStoreImpl(){}
+	public UserStoreImpl(String string){}
 	
 	@Override
 	public void addUser(String surname, String forename, String GUID, String password){

@@ -14,6 +14,7 @@ import uk.ac.glasgow.clui.SystemCommandException;
 import uk.ac.glasgow.clui.SystemDialogue;
 import uk.ac.glasgow.internman.advertstore.AdvertisementImpl;
 import uk.ac.glasgow.internman.InternMan;
+import uk.ac.glasgow.internman.Role;
 import uk.ac.glasgow.internman.advertstore.RoleImpl;
 
 @MinimumArguments(0)
@@ -33,7 +34,7 @@ public class AcceptOfferCommand extends SystemCommand<InternMan> {
 	@Override
 	public void processCommand(String... args) throws SystemCommandException {
 		
-		RoleImpl internshipRole = null;
+		Role internshipRole = null;
 		
 		if (args.length > 2)
 			try {
@@ -70,7 +71,7 @@ public class AcceptOfferCommand extends SystemCommand<InternMan> {
 		
 	}
 
-	private RoleImpl createNewInternshipRole() throws IOException, ParseException {
+	private Role createNewInternshipRole() throws IOException, ParseException {
 				
 		String title = dialogue.getUserInput("Enter role title");
 
